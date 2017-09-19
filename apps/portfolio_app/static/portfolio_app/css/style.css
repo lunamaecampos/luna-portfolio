@@ -1,0 +1,91 @@
+*{
+  font-family: "Lato", sans-serif;
+}
+html{
+  height: 100%;
+}
+body {
+  margin: 0;
+  height: 100%;
+}
+.item {
+  min-height: 100%;
+  width: 100%;
+  color: lavenderblush;
+  text-align: center;
+}
+.full-screen {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#div2{
+  min-height: 100%;
+  width: 100%;
+  background-color: white;
+}
+#div3{
+  min-height: 100%;
+  width: 100%;
+  background-color: black;
+  text-align: right;
+  padding-right: 1%;
+}
+#banner1{
+  padding-top: 20%;
+  font-size: 9em;
+  font-weight: bolder;
+  text-align: center;
+  /*background-color: darkgrey;*/
+  padding-left: .25em;
+  padding-right: .25em;
+}
+#banner2{
+  font-size: 3em;
+  font-weight: bolder;
+  text-align: center;
+  /*background-color: darkgrey;*/
+  padding-left: .25em;
+  padding-right: .25em;
+}
+#banner3{
+  padding-top: 15%;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 7em;
+  font-weight: bolder;
+  text-align: center;
+}
+#banner4{
+  padding-top: 17%;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-size: 7em;
+  font-weight: bolder;
+  text-align: center;
+}
+.banner{
+  padding-top: 10%;
+  padding-left: 1%;
+}
+.aboutme{
+  font-size: 1em;
+  padding-left:30%;
+  padding-right: 10%;
+}
+
+/*.dot {
+  height: .75em;
+  width: .75em;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.footer {
+  left: 48%;
+  width: 4em;
+  position: absolute;
+  bottom: 1em;
+}*/
