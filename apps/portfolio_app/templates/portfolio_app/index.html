@@ -11,7 +11,7 @@
     <title>Luna Campos</title>
   </head>
   <body>
-    <div id="mycarousel" class="carousel slide" data-ride="carousel">
+    <div id="mycarousel" class="carousel fade-carousel slide carousel-fade" data-ride="carousel" data-interval="4000" id="bs-carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
@@ -21,25 +21,31 @@
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
-        <div class="item">
+        <div class="item slides">
             <img src="{% static "portfolio_app/images/spacelander.jpg"%}" data-color="beige" alt="Space Lander">
-            <div id="banner1"><span class="banner" style="color:darkseagreen">Luna</span><span class="banner" style="color:paleturquoise">Campos</span></div>
-            <div id="banner2"><span class="banner">Full Stack Web Developer</span></div>
+              <div class="headerfader">
+                <div id="banner1"><span class="banner" style="color:darkseagreen">Luna</span><span class="banner" style="color:paleturquoise">Campos</span></div>
+                <div id="banner2"><span class="banner">Full Stack Web Developer</span></div>
+              </div>
             <div class="carousel-caption">
-                <!-- <h3>First Image</h3> -->
             </div>
         </div>
-        <div class="item">
+        <div class="item slides">
             <img src="{% static "portfolio_app/images/plan.jpg"%}" data-color="firebrick" alt="Second Image">
-            <div id="banner3"><span style="color:chartreuse;">I </span><span style="color:darkorange;">am </span><span style="color:orangered;">an</span> <span style="color:yellow;"> auteur</span><span style="color:chartreuse;"> at </span><span style="color:royalblue;">the</span><span style="color:darkorchid;"> helm</span>
-              <span style="color:orangered;"> of</span><span style="color:darkorange;"> creation</span><span style="color:yellow;"> ready</span><span style="color:chartreuse;"> to </span><span style="color:royalblue;">materialize</span><span style="color:darkorchid;">.</span></div>
+            <div class="headerfader">
+              <div id="banner3">
+                <div class="rainbow">I am an auteur at the helm of creation ready to materialize.</div>
+              </div>
+            </div>
             <div class="carousel-caption">
                 <!-- <h3>Second Image</h3> -->
             </div>
         </div>
-        <div class="item">
+        <div class="item slides">
             <img src="{% static "portfolio_app/images/ableton.jpg"%}" data-color="violet" alt="Third Image">
-            <div id="banner4"><span class="banner" style="color:white;">My passions flow with rhythm.</span></div>
+            <div class="headerfader">
+              <div id="banner4"><span class="banner" style="color:white;">My passions flow with rhythm.</span></div>
+            </div>
             <div class="carousel-caption">
                 <!-- <h3>Third Image</h3> -->
             </div>
@@ -56,7 +62,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-
+    
     <div id="div2">
       <span class="banner" style="color:black; font-size:8em; font-weight:bolder;">About Me</span><br>
       <div class="aboutme">Heirloom etsy knausgaard portland kale chips, bespoke hoodie edison bulb hell of dreamcatcher waistcoat butcher af. Distillery copper mug adaptogen fingerstache austin disrupt. Gluten-free cronut hashtag intelligentsia next level unicorn. Selvage vinyl vexillologist cornhole cliche drinking vinegar. Coloring book fam 90's glossier church-key messenger bag 3 wolf moon chia DIY mustache palo santo. Cliche pork belly ethical cardigan polaroid mumblecore. Leggings pop-up raw denim austin photo booth pabst church-key cray. Poutine knausgaard blue bottle bitters roof party hoodie jianbing four loko listicle live-edge la croix 90's. Cardigan snackwave banh mi kitsch cloud bread palo santo freegan pok pok microdosing. Bicycle rights gluten-free disrupt aesthetic. Wolf polaroid everyday carry, kickstarter cronut lo-fi sartorial small batch jianbing normcore glossier. Shaman skateboard blog, craft beer schlitz franzen locavore health goth swag next level raclette raw denim keytar iceland four loko. Jean shorts austin VHS, 8-bit fam vice fixie tattooed everyday carry beard twee artisan polaroid.<br><br>

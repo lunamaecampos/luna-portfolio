@@ -31,6 +31,22 @@ body {
   text-align: right;
   padding-right: 1%;
 }
+.fade-carousel .carousel-inner .item .headerfader {
+    opacity: 0;
+    -webkit-transition: 1s all ease-in-out .1s;
+       -moz-transition: 1s all ease-in-out .1s;
+        -ms-transition: 1s all ease-in-out .1s;
+         -o-transition: 1s all ease-in-out .1s;
+            transition: 1s all ease-in-out .1s;
+}
+.fade-carousel .carousel-inner .item.active .headerfader {
+    opacity: 1;
+    -webkit-transition: 1s all ease-in-out .1s;
+       -moz-transition: 1s all ease-in-out .1s;
+        -ms-transition: 1s all ease-in-out .1s;
+         -o-transition: 1s all ease-in-out .1s;
+            transition: 1s all ease-in-out .1s;
+}
 #banner1{
   padding-top: 20%;
   font-size: 9em;
@@ -39,6 +55,8 @@ body {
   /*background-color: darkgrey;*/
   padding-left: .25em;
   padding-right: .25em;
+  display: none;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.75);
 }
 #banner2{
   font-size: 3em;
@@ -47,14 +65,17 @@ body {
   /*background-color: darkgrey;*/
   padding-left: .25em;
   padding-right: .25em;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+  display: none;
 }
 #banner3{
   padding-top: 15%;
-  padding-left: 15%;
-  padding-right: 15%;
-  font-size: 7em;
+  padding-left: 20%;
+  padding-right: 20%;
+  font-size: 6em;
   font-weight: bolder;
   text-align: center;
+  /*display: none;*/
 }
 #banner4{
   padding-top: 17%;
@@ -63,6 +84,14 @@ body {
   font-size: 7em;
   font-weight: bolder;
   text-align: center;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+}
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 .banner{
   padding-top: 10%;

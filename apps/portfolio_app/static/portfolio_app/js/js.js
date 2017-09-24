@@ -1,3 +1,5 @@
+// *********Fade out for pages***********************
+
 $(function(){
   var documentEl = $(document),
       fadeElem = $(".slide");
@@ -24,7 +26,20 @@ $(function(){
     });
   });
 });
+// **************************************************************
 
+// ********************Fading****************************
+$(document).ready(function(){
+    $('#banner1').fadeIn(400, part2);
+});
+var part2 = function part2(){
+  $(document).ready(function(){
+    $('#banner2').delay(400).fadeIn(600);
+});
+}
+// **************************************************************
+
+// ********************Landing carousel****************************
 var $item = $('.carousel .item');
 var $wHeight = $(window).height();
 $item.eq(0).addClass('active');
@@ -50,3 +65,4 @@ $('.carousel').carousel({
   interval: 1000,
   pause: "false"
 });
+// *********************************************************************
