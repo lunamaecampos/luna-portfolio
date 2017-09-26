@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'portfolio_app/css/style.css' %}" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -62,16 +63,101 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-    
-    <div id="div2">
-      <span class="banner" style="color:black; font-size:8em; font-weight:bolder;">About Me</span><br>
-      <div class="aboutme">Heirloom etsy knausgaard portland kale chips, bespoke hoodie edison bulb hell of dreamcatcher waistcoat butcher af. Distillery copper mug adaptogen fingerstache austin disrupt. Gluten-free cronut hashtag intelligentsia next level unicorn. Selvage vinyl vexillologist cornhole cliche drinking vinegar. Coloring book fam 90's glossier church-key messenger bag 3 wolf moon chia DIY mustache palo santo. Cliche pork belly ethical cardigan polaroid mumblecore. Leggings pop-up raw denim austin photo booth pabst church-key cray. Poutine knausgaard blue bottle bitters roof party hoodie jianbing four loko listicle live-edge la croix 90's. Cardigan snackwave banh mi kitsch cloud bread palo santo freegan pok pok microdosing. Bicycle rights gluten-free disrupt aesthetic. Wolf polaroid everyday carry, kickstarter cronut lo-fi sartorial small batch jianbing normcore glossier. Shaman skateboard blog, craft beer schlitz franzen locavore health goth swag next level raclette raw denim keytar iceland four loko. Jean shorts austin VHS, 8-bit fam vice fixie tattooed everyday carry beard twee artisan polaroid.<br><br>
-      Heirloom etsy knausgaard portland kale chips, bespoke hoodie edison bulb hell of dreamcatcher waistcoat butcher af. Distillery copper mug adaptogen fingerstache austin disrupt. Gluten-free cronut hashtag intelligentsia next level unicorn. Selvage vinyl vexillologist cornhole cliche drinking vinegar. Coloring book fam 90's glossier church-key messenger bag 3 wolf moon chia DIY mustache palo santo. Cliche pork belly ethical cardigan polaroid mumblecore. Leggings pop-up raw denim austin photo booth pabst church-key cray. Poutine knausgaard blue bottle bitters roof party hoodie jianbing four loko listicle live-edge la croix 90's. Cardigan snackwave banh mi kitsch cloud bread palo santo freegan pok pok microdosing. Bicycle rights gluten-free disrupt aesthetic. Wolf polaroid everyday carry, kickstarter cronut lo-fi sartorial small batch jianbing normcore glossier. Shaman skateboard blog, craft beer schlitz franzen locavore health goth swag next level raclette raw denim keytar iceland four loko. Jean shorts austin VHS, 8-bit fam vice fixie tattooed everyday carry beard twee artisan polaroid.<br><br>
-      Heirloom etsy knausgaard portland kale chips, bespoke hoodie edison bulb hell of dreamcatcher waistcoat butcher af. Distillery copper mug adaptogen fingerstache austin disrupt. Gluten-free cronut hashtag intelligentsia next level unicorn. Selvage vinyl vexillologist cornhole cliche drinking vinegar. Coloring book fam 90's glossier church-key messenger bag 3 wolf moon chia DIY mustache palo santo. Cliche pork belly ethical cardigan polaroid mumblecore. Leggings pop-up raw denim austin photo booth pabst church-key cray. Poutine knausgaard blue bottle bitters roof party hoodie jianbing four loko listicle live-edge la croix 90's. Cardigan snackwave banh mi kitsch cloud bread palo santo freegan pok pok microdosing. Bicycle rights gluten-free disrupt aesthetic. Wolf polaroid everyday carry, kickstarter cronut lo-fi sartorial small batch jianbing normcore glossier. Shaman skateboard blog, craft beer schlitz franzen locavore health goth swag next level raclette raw denim keytar iceland four loko. Jean shorts austin VHS, 8-bit fam vice fixie tattooed everyday carry beard twee artisan polaroid.<br><br>
-      </div>
+
+      <div id="aboutme">
+        <div class="leftpane">
+          <span id="aboutmeheader" class="banner" style="color:black; font-size:7em; font-weight:bolder;position:relative;opacity:0;left:-750px;">About Me</span><br>
+          <div id="imageholder">
+            <img src="{% static "portfolio_app/images/selfie.jpg"%}" class="img-circle" data-color="lavender" alt="Space Lander">
+          </div>
+        </div>
+        <div id="bio">
+          I am artist with a vision to build out projects from the ground up.
+          I am a self-sufficient and resourceful person so I'm not afraid to work on my own.
+          However, I also am open to and value input from my peers and enjoy collaborating ideas with others.
+          My recent endeavors include building out web and iOS applications and stretch to composing/producing musical ideas
+          and planning out small business ventures.<br><br>
+          I have taken computer science classes in college and I am a recent graduate of the acclaimed Coding Dojo Bootcamp.
+          I'm currently seeking opportunities to apply my developer skills and build out the project of your dreams.
+        </div>
+
     </div>
     <div id="div3">
-      <span class="banner" style="color:white; font-size:8em; font-weight:bolder;">My Projects</span><br>
+      <span class="banner" style="color:white; font-size:8em; font-weight:bolder;">Projects</span><br>
+    </div>
+    <div id="techdiv">
+      <span class="banner" style="color:black; font-size:8em; font-weight:bolder; position:relative; opacity:0; left:-750px;">Technologies</span><br>
+      <div class="assetrow">
+        <div class="assetmenumain">
+          <img class="asset" src="{% static "portfolio_app/images/python.svg"%}"alt="Python Icon">
+          <h1>Python</h1>
+          <h4>Python</h4>
+          <h4>MySQL</h4>
+          <h4>Flask</h4>
+          <h4>Django</h4>
+          <h4>Ajax</h4>
+        </div>
+        <div class="assetmenumain">
+          <img class="asset" src="{% static "portfolio_app/images/js.svg"%}"alt="JS Icon">
+          <h1>MEAN</h1>
+          <h4>Javascript</h4>
+          <h4>MongoDB</h4>
+          <h4>Express.JS</h4>
+          <h4>Angular</h4>
+          <h4>Node.JS</h4>
+        </div>
+        <div class="assetmenumain">
+          <img class="asset" src="{% static "portfolio_app/images/swift.svg"%}"alt="Swift Icon">
+          <h1>iOS</h1>
+          <h4>Swift</h4>
+          <h4>XCode</h4>
+          <h4>Core Data</h4>
+          <h4>Core Motion</h4>
+          <h4>AudioKit</h4>
+        </div>
+      </div>
+      <div class="assetrow" id="assetrow1">
+        <div class="assetmenu">
+          <img class="asset" src="{% static "portfolio_app/images/html5.png"%}"alt="HTML5 Icon">
+          <h3>HTML5</h3>
+        </div>
+        <div class="assetmenu">
+          <img class="asset" src="{% static "portfolio_app/images/css3.png"%}"alt="CSS3 Icon">
+          <h3>CSS3</h3>
+        </div>
+        <div class="assetmenu">
+          <img class="asset" src="{% static "portfolio_app/images/jquery.png"%}"alt="JQuery Icon">
+          <h3>JQuery</h3>
+        </div>
+      </div>
+      <div class="assetrow" id="assetrow2">
+        <div class="assetmenu">
+          <img class="asset" src="{% static "portfolio_app/images/bootstrap.png"%}"alt="Swift Icon">
+          <h3>Bootstrap</h3>
+        </div>
+        <div class="assetmenu">
+          <img class="asset" src="{% static "portfolio_app/images/waapi.png"%}"alt="Python Icon">
+          <h3>Web Audio</h3>
+        </div>
+        <div class="assetmenu">
+          <img class="asset" src="{% static "portfolio_app/images/live9.png"%}"alt="Ableton Icon">
+          <h3>Ableton Live</h3>
+        </div>
+      </div>
+      <div class="assetrow" id="assetrow3">
+        <div class="assetmenu">
+          <img class="asset" src="{% static "portfolio_app/images/kontakt.png"%}"alt="Kontakt Icon">
+          <h3>NI Komplete</h3>
+        </div>
+        <div class="assetmenu">
+          <img class="asset" src="{% static "portfolio_app/images/uaudio.png"%}"alt="Universal Audio Icon">
+          <h3>Universal Audio</h3>
+        </div>
+        <div class="assetmenu">
+          <img class="asset" src="{% static "portfolio_app/images/arturia.png"%}"alt="Arturia Icon">
+          <h3>Arturia V</h3>
+        </div>
+      </div>
     </div>
     <script type="text/javascript" src="{% static 'portfolio_app/js/js.js' %}"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
