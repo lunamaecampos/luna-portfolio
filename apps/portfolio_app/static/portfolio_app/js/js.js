@@ -28,7 +28,7 @@ $(function(){
 });
 $(function(){
   var documentEl = $(document),
-      fadeElem = $("#div3");
+      fadeElem = $("#projectsdiv");
   documentEl.on('scroll', function(){
     var currScrollPos = documentEl.scrollTop();
 
@@ -54,7 +54,7 @@ $(function(){
 });
 // **************************************************************
 
-// ********************Fading****************************
+// ********************Carousel Text Fading****************************
 $(document).ready(function(){
     $('#banner1').fadeIn(400, part2);
 });
@@ -108,7 +108,24 @@ $(function(){
     });
   });
 });
+var projectsAnimation =function(){
+  $('#projectsdiv').find('.banner').delay(10).animate({opacity:1, right:0},'slow');
+}
+$(function(){
+  var documentEl = $(document),
+      fadeElem = $("#projectsdiv");
+  documentEl.on('scroll', function(){
+    var currScrollPos = documentEl.scrollTop();
 
+    fadeElem.each(function(){
+      var $this = $(this),
+        elemOffsetTop = $this.offset().top;
+      if(currScrollPos > elemOffsetTop - 500 || currScrollPos == elemOffsetTop){
+        projectsAnimation();
+      }
+    });
+  });
+});
 // **************************************************************
 
 // ********************Landing carousel****************************

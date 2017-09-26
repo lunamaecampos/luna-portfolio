@@ -24,7 +24,7 @@ body {
   width: 100%;
   background-color: white;
 }
-#div3{
+#projectsdiv{
   min-height: 100%;
   width: 100%;
   background-color: black;
@@ -140,6 +140,22 @@ height: auto;
   position: relative;
   opacity: 0;
   bottom: -200px;
+}
+#projectthumbnails{
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  /*background-color: red;*/
+}
+
+.projectthumb{
+  height: 150px;
+  width:auto;
+}
+.projectthumb:hover{
+  transform: scale(1.1);
+  transition: .2s;
 }
 .assetrow{
   width:60%;
