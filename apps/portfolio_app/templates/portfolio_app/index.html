@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'portfolio_app/css/style.css' %}" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'portfolio_app/css/lightbox.css' %}" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     {% load staticfiles %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,15 +81,138 @@
         I have taken computer science classes in college and I am a recent graduate of the acclaimed Coding Dojo Bootcamp.
         I'm currently seeking opportunities to apply my developer skills and build out the project of your dreams.
       </div>
-
     </div>
-
+    <div id="parallaxdiv">
+      <style>
+        #parallaxdiv{
+          background: url({% static "portfolio_app/images/lacity.png"%});
+          background-size:cover;
+          min-height: 35%;
+        }
+        #projectsdiv{
+          background: linear-gradient(to top, transparent, black),
+          url({% static "portfolio_app/images/space2.jpg"%});
+          background-size: cover;
+        }
+      </style>
+    </div>
     <div id="projectsdiv">
       <span class="banner" style="color:white; font-size:8em; font-weight:bolder; position:relative; opacity:0; right:-300px;">Coding Projects</span><br>
       <div id="projectthumbnails">
-        <img src="{% static "portfolio_app/images/screens/lsesynth/4.png"%}" class="projectthumb" alt="LSE Synth">
-        <img src="{% static "portfolio_app/images/screens/xinxin/5.png"%}" class="projectthumb" alt="Xinxin Website">
-        <img src="{% static "portfolio_app/images/screens/synthgiro/main.png"%}" class="projectthumb" alt="SynthGiro">
+        <img src="{% static "portfolio_app/images/screens/lsesynth/4.png"%}" class="projectthumb" id="LSEMENU" alt="LSE Synth">
+        <img src="{% static "portfolio_app/images/screens/blosm/2.png"%}" class="projectthumb" id="BLOSMMENU" alt="Blosm">
+        <img src="{% static "portfolio_app/images/screens/xinxin/5.png"%}" class="projectthumb" id="XINXINMENU" alt="Xinxin Website">
+        <img src="{% static "portfolio_app/images/screens/synthgiro/main.png"%}" class="projectthumb" id="GIROMENU" alt="SynthGiro">
+        <img src="{% static "portfolio_app/images/screens/tasklist/3.png"%}" class="projectthumb" id="TASKLISTMENU" alt="Task List">
+      </div>
+      <div class="projectinfo">
+        <div id="lsesynthinfo">
+          <div class="projectinfoleft">
+            <div style="color:white; font-weight:bold; font-size:4em;">L S E MEANSYNTH</div>
+            <p class="desc" style="color:#f7BA39;">*Still in development*</p>
+            <p class="desc" style="color:#d35622;">This is a synthesizer web application modeled after a vintage synthesizer from the 80s.
+              The application is built using the MEAN stack and implements the Web Audio API for sound synthesis.
+              Users can sign up and save their favorite patches as JSON data and call back from the database at a later time.</p>
+            <p class="desc" style="color:#882d16;">Technologies used: Javascript, MongoDB, ExpressJS, AngularJS, NodeJS, JQuery, Web Audio API, HTML5/CSS3.</p>
+            <p class="desc" style="color:#042f85">Live Project Here: <a href="https://github.com/lunamaecampos"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            </p>
+          </div>
+        </div>
+        <div id="xinxininfo">
+          <div class="projectinfoleft">
+            <div style="color:white; font-weight:bold; font-size:4em;">X I N X I N</div>
+            <p class="desc" style="color:lightblue;">This is a website for the band XINXIN.
+              It's built with RWD to allow it to scale to mobile devices.  It features a
+              sign up form that sends out postData to MailChimp service.  The application
+              is built using the Django framework.  The website admin can sign into a
+              User dashboard and from there can create new tourdates and store them in
+              Django's SQLlite database and delete them too.  The tourdates are then
+              displayed on the main band website.
+            </p>
+            <p class="desc" style="color:skyblue;">Technologies used: Python, Django, SQLlite, Javascript, JQuery, HTML5/CSS3, RWD.</p>
+            <p class="desc" style="color:moccasin;">Live Project Here: <a href="https://xinxin.com/"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            </p>
+          </div>
+        </div>
+        <div id="synthgyroinfo">
+          <div class="projectinfoleft">
+            <div style="color:white; font-weight:bold; font-size:4em;">SYNTH GIRO</div>
+            <p class="desc" style="color:darkgrey">This iPhone application is built using
+              the AudioKit framework for sound synthesis.  Users can play midi notes with
+              the on-screen keyboard or via midi controller. There is a waveform selection
+              option and modulation of delay or filters are controlled with Apple's
+              CoreMotion Technology which makes for fun expressive play.
+            </p>
+            <p class="desc" style="color:dimgrey;">Technologies used: Swift, Xcode, AudioKit, CoreMotion, Midi.</p>
+            <p class="desc" style="color:limegreen;">Live Project Here: <a href="https://apple.com/"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            </p>
+          </div>
+        </div>
+        <div id="taskthumbsinfo">
+          <div class="projectinfoleft">
+            <div style="color:white; font-weight:bold; font-size:4em;">TASK LIST</div>
+            <p class="desc" style="color:gainsboro">This iPhone CRUD application is built with
+              utitlizes CoreData to store user information in a SQLlite Database, which is
+              retrieved, anytime the user reloads the home screen in the app.
+            </p>
+            <p class="desc" style="color:deepskyblue;">Technologies used: Swift, Xcode, CoreData</p>
+            <p class="desc" style="color:red;">Live Project Here: <a href="https://apple.com/"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            </p>
+          </div>
+        </div>
+        <div id="blosminfo">
+          <div class="projectinfoleft">
+            <div style="color:white; font-weight:bold; font-size:4em;">B L O S M</div>
+            <p class="desc" style="color:#f7BA39;">*Still in development*</p>
+            <p class="desc" style="color:#555;">This is a website for a music sharing service aimed
+              towards musicians seeking to collaborate.  Users can sign up and easily upload their own music.
+              Media files uploaded are refernced to a separate media folder from the SQLlite database.  The
+              media player is HTML/CSS/JS and utilizes the Web Audio API for playback options.
+            </p>
+            <p class="desc" style="color:#ff564c;">Technologies used: Python, Django, SQLlite, Javascript, JQuery, HTML5/CSS3, Web Audio API.</p>
+            <p class="desc" style="color:darksalmon;">Live Project Here: <a href="https://xinxin.com/"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="projectinforight">
+        <div class="descthumbs" id="lsesynththumbs">
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/lsesynth/1.png"%}" class="descthumb" alt="LSE Synth" onclick="openModal();currentSlide(1)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/lsesynth/2.png"%}" class="descthumb" alt="LSE Synth" onclick="openModal();currentSlide(2)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/lsesynth/3.png"%}" class="descthumb" alt="LSE Synth" onclick="openModal();currentSlide(3)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/lsesynth/4.png"%}" class="descthumb" alt="LSE Synth" onclick="openModal();currentSlide(4)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/lsesynth/5.png"%}" class="descthumb" alt="LSE Synth" onclick="openModal();currentSlide(5)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/lsesynth/6.png"%}" class="descthumb" alt="LSE Synth" onclick="openModal();currentSlide(6)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/lsesynth/7.png"%}" class="descthumb" alt="LSE Synth" onclick="openModal();currentSlide(7)"></div>
+        </div>
+        <div class="descthumbs" id="blosmthumbs">
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/blosm/1.png"%}" class="descthumb" alt="BLOSM" onclick="openModal();currentSlide(8)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/blosm/2.png"%}" class="descthumb" alt="BLOSM" onclick="openModal();currentSlide(9)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/blosm/3.png"%}" class="descthumb" alt="BLOSM" onclick="openModal();currentSlide(10)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/blosm/4.png"%}" class="descthumb" alt="BLOSM" onclick="openModal();currentSlide(11)"></div>
+        </div>
+        <div class="descthumbs" id="xinxinthumbs">
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/xinxin/1.png"%}" class="descthumb"alt="LSE Synth" onclick="openModal();currentSlide(12)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/xinxin/2.png"%}" class="descthumb" alt="LSE Synth" onclick="openModal();currentSlide(13)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/xinxin/3.png"%}" class="descthumb" alt="LSE Synth" onclick="openModal();currentSlide(14)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/xinxin/4.png"%}" class="descthumb" alt="LSE Synth" onclick="openModal();currentSlide(15)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/xinxin/5.png"%}" class="descthumb" alt="LSE Synth" onclick="openModal();currentSlide(16)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/xinxin/6.png"%}" class="descthumb" alt="LSE Synth" onclick="openModal();currentSlide(17)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/xinxin/7.png"%}" class="descthumb" alt="LSE Synth" onclick="openModal();currentSlide(18)"></div>
+        </div>
+        <div class="descthumbs" id="synthgirothumbs">
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/synthgiro/main.png"%}" class="iosthumb" alt="Synth Giro" onclick="openModal();currentSlide(22)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/synthgiro/settings.png"%}" class="iosthumb" alt="Synth Giro" onclick="openModal();currentSlide(23)"></div>
+        </div>
+        <div class="descthumbs" id="taskthumbs">
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/tasklist/1.png"%}" class="iosthumb" alt="Task List" onclick="openModal();currentSlide(24)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/tasklist/2.png"%}" class="iosthumb" alt="Task List" onclick="openModal();currentSlide(25)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/tasklist/3.png"%}" class="iosthumb" alt="Task List" onclick="openModal();currentSlide(26)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/tasklist/4.png"%}" class="iosthumb" alt="Task List" onclick="openModal();currentSlide(27)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/tasklist/5.png"%}" class="iosthumb" alt="Task List" onclick="openModal();currentSlide(28)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/tasklist/6.png"%}" class="iosthumb" alt="Task List" onclick="openModal();currentSlide(29)"></div>
+          <div class="bgdescthumb"><img src="{% static "portfolio_app/images/screens/tasklist/7.png"%}" class="iosthumb" alt="Task List" onclick="openModal();currentSlide(30)"></div>
+        </div>
       </div>
     </div>
     <div id="techdiv">
@@ -104,7 +228,7 @@
           <h4>Ajax</h4>
         </div>
         <div class="assetmenumain">
-          <img class="asset" src="{% static "portfolio_app/images/js.svg"%}"alt="JS Icon">
+          <img class="asset" src="{% static "portfolio_app/images/js.png"%}"alt="JS Icon">
           <h1>MEAN</h1>
           <h4>Javascript</h4>
           <h4>MongoDB</h4>
@@ -135,22 +259,34 @@
           <img class="asset" src="{% static "portfolio_app/images/jquery.png"%}"alt="JQuery Icon">
           <h3>JQuery</h3>
         </div>
-      </div>
-      <div class="assetrow" id="assetrow2">
         <div class="assetmenu">
           <img class="asset" src="{% static "portfolio_app/images/bootstrap.png"%}"alt="Swift Icon">
           <h3>Bootstrap</h3>
+        </div>
+      </div>
+      <div class="assetrow" id="assetrow2">
+        <div class="assetmenu">
+          <img class="asset" src="{% static "portfolio_app/images/githubicon.png"%}"alt="Swift Icon">
+          <h3>GitHub</h3>
+        </div>
+        <div class="assetmenu">
+          <img class="asset" src="{% static "portfolio_app/images/aws.png"%}"alt="Swift Icon">
+          <h3>AWS</h3>
+        </div>
+        <div class="assetmenu">
+          <img class="asset" src="{% static "portfolio_app/images/rwd.png"%}"alt="Swift Icon">
+          <h3>RWD</h3>
         </div>
         <div class="assetmenu">
           <img class="asset" src="{% static "portfolio_app/images/waapi.png"%}"alt="Python Icon">
           <h3>Web Audio</h3>
         </div>
+      </div>
+      <div class="assetrow" id="assetrow3">
         <div class="assetmenu">
           <img class="asset" src="{% static "portfolio_app/images/live9.png"%}"alt="Ableton Icon">
           <h3>Ableton Live</h3>
         </div>
-      </div>
-      <div class="assetrow" id="assetrow3">
         <div class="assetmenu">
           <img class="asset" src="{% static "portfolio_app/images/kontakt.png"%}"alt="Kontakt Icon">
           <h3>NI Komplete</h3>
@@ -182,6 +318,143 @@
       </div>
       <div><span style="font-size:1.5em;color:white;">© 2017 by Luna Campos</span><div>
     </div>
+
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal('lseModal')">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">L S E MEANSYNTH</div>
+          <img src="{% static "portfolio_app/images/screens/lsesynth/1.png"%}">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">L S E MEANSYNTH</div>
+          <img src="{% static "portfolio_app/images/screens/lsesynth/2.png"%}">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">L S E MEANSYNTH</div>
+          <img src="{% static "portfolio_app/images/screens/lsesynth/3.png"%}">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">L S E MEANSYNTH</div>
+          <img src="{% static "portfolio_app/images/screens/lsesynth/4.png"%}">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">L S E MEANSYNTH</div>
+          <img src="{% static "portfolio_app/images/screens/lsesynth/5.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">L S E MEANSYNTH</div>
+          <img src="{% static "portfolio_app/images/screens/lsesynth/6.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">L S E MEANSYNTH</div>
+          <img src="{% static "portfolio_app/images/screens/lsesynth/7.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">b l o s m</div>
+          <img src="{% static "portfolio_app/images/screens/blosm/1.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">b l o s m</div>
+          <img src="{% static "portfolio_app/images/screens/blosm/2.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">b l o s m</div>
+          <img src="{% static "portfolio_app/images/screens/blosm/3.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">b l o s m</div>
+          <img src="{% static "portfolio_app/images/screens/blosm/4.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">X I N X I N</div>
+          <img src="{% static "portfolio_app/images/screens/xinxin/1.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">X I N X I N</div>
+          <img src="{% static "portfolio_app/images/screens/xinxin/2.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">X I N X I N</div>
+          <img src="{% static "portfolio_app/images/screens/xinxin/3.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">X I N X I N</div>
+          <img src="{% static "portfolio_app/images/screens/xinxin/4.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">X I N X I N</div>
+          <img src="{% static "portfolio_app/images/screens/xinxin/5.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">X I N X I N</div>
+          <img src="{% static "portfolio_app/images/screens/xinxin/6.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">X I N X I N</div>
+          <img src="{% static "portfolio_app/images/screens/xinxin/7.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">X I N X I N</div>
+          <img src="{% static "portfolio_app/images/screens/xinxin/8.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">X I N X I N</div>
+          <img src="{% static "portfolio_appTASK LIST/screens/xinxin/9.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">X I N X I N</div>
+          <img src="{% static "portfolio_app/images/screens/xinxin/10.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">SYNTH GIRO</div>
+          <img src="{% static "portfolio_app/images/screens/synthgiro/main.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">SYNTH GIRO</div>
+          <img src="{% static "portfolio_app/images/screens/synthgiro/settings.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">TASK LIST</div>
+          <img src="{% static "portfolio_app/images/screens/tasklist/1.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">TASK LIST</div>
+          <img src="{% static "portfolio_app/images/screens/tasklist/2.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">TASK LIST</div>
+          <img src="{% static "portfolio_app/images/screens/tasklist/3.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">TASK LIST</div>
+          <img src="{% static "portfolio_app/images/screens/tasklist/4.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">TASK LIST</div>
+          <img src="{% static "portfolio_app/images/screens/tasklist/5.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">TASK LIST</div>
+          <img src="{% static "portfolio_app/images/screens/tasklist/6.png"%}">
+        </div>
+        <div class="mySlides">
+          <div class="numbertext">TASK LIST</div>
+          <img src="{% static "portfolio_app/images/screens/tasklist/7.png"%}">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      </div>
+    </div>
+
     <script type="text/javascript" src="{% static 'portfolio_app/js/js.js' %}"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
