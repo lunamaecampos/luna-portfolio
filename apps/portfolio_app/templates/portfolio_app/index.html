@@ -67,7 +67,7 @@
 
     <div id="aboutme">
       <div class="leftpane">
-        <span id="aboutmeheader" class="banner" style="color:black; font-size:7em; font-weight:bolder;position:relative;opacity:0;left:-750px;">About Me</span><br>
+        <span id="aboutmeheader" class="banner">About Me</span><br>
         <div id="imageholder">
           <img src="{% static "portfolio_app/images/selfie.jpg"%}" class="img-circle" data-color="lavender" alt="Space Lander">
         </div>
@@ -97,7 +97,7 @@
       </style>
     </div>
     <div id="projectsdiv">
-      <span class="banner" style="color:white; font-size:8em; font-weight:bolder; position:relative; opacity:0; right:-300px;">Coding Projects</span><br>
+      <span class="banner" id="projectbanner">Coding Projects</span><br>
       <div id="projectthumbnails">
         <img src="{% static "portfolio_app/images/screens/lsesynth/4.png"%}" class="projectthumb" id="LSEMENU" alt="LSE Synth">
         <img src="{% static "portfolio_app/images/screens/blosm/2.png"%}" class="projectthumb" id="BLOSMMENU" alt="Blosm">
@@ -108,19 +108,20 @@
       <div class="projectinfo">
         <div id="lsesynthinfo">
           <div class="projectinfoleft">
-            <div style="color:white; font-weight:bold; font-size:4em;">L S E MEANSYNTH</div>
+            <div class="projectinfotitle">L S E MEANSYNTH</div>
             <p class="desc" style="color:#f7BA39;">*Still in development*</p>
             <p class="desc" style="color:#d35622;">This is a synthesizer web application modeled after a vintage synthesizer from the 80s.
               The application is built using the MEAN stack and implements the Web Audio API for sound synthesis.
               Users can sign up and save their favorite patches as JSON data and call back from the database at a later time.</p>
             <p class="desc" style="color:#882d16;">Technologies used: Javascript, MongoDB, ExpressJS, AngularJS, NodeJS, JQuery, Web Audio API, HTML5/CSS3.</p>
             <p class="desc" style="color:#042f85">Live Project Here: <a href="https://github.com/lunamaecampos"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            <p class="desc" style="color:white; font-weight:bold;" onclick="openModal();currentSlide(1)">Check Out Gallery Here</p>
             </p>
           </div>
         </div>
         <div id="xinxininfo">
           <div class="projectinfoleft">
-            <div style="color:white; font-weight:bold; font-size:4em;">X I N X I N</div>
+            <div class="projectinfotitle">X I N X I N</div>
             <p class="desc" style="color:lightblue;">This is a website for the band XINXIN.
               It's built with RWD to allow it to scale to mobile devices.  It features a
               sign up form that sends out postData to MailChimp service.  The application
@@ -131,12 +132,13 @@
             </p>
             <p class="desc" style="color:skyblue;">Technologies used: Python, Django, SQLlite, Javascript, JQuery, HTML5/CSS3, RWD.</p>
             <p class="desc" style="color:moccasin;">Live Project Here: <a href="https://xinxin.com/"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            <p class="desc" style="color:white; font-weight:bold;" onclick="openModal();currentSlide(12)">Check Out Gallery Here</p>
             </p>
           </div>
         </div>
         <div id="synthgyroinfo">
           <div class="projectinfoleft">
-            <div style="color:white; font-weight:bold; font-size:4em;">SYNTH GIRO</div>
+            <div class="projectinfotitle">SYNTH GIRO</div>
             <p class="desc" style="color:darkgrey">This iPhone application is built using
               the AudioKit framework for sound synthesis.  Users can play midi notes with
               the on-screen keyboard or via midi controller. There is a waveform selection
@@ -145,24 +147,26 @@
             </p>
             <p class="desc" style="color:dimgrey;">Technologies used: Swift, Xcode, AudioKit, CoreMotion, Midi.</p>
             <p class="desc" style="color:limegreen;">Live Project Here: <a href="https://apple.com/"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            <p class="desc" style="color:white; font-weight:bold;" onclick="openModal();currentSlide(22)">Check Out Gallery Here</p>
             </p>
           </div>
         </div>
         <div id="taskthumbsinfo">
           <div class="projectinfoleft">
-            <div style="color:white; font-weight:bold; font-size:4em;">TASK LIST</div>
+            <div class="projectinfotitle">TASK LIST</div>
             <p class="desc" style="color:gainsboro">This iPhone CRUD application is built with
               utitlizes CoreData to store user information in a SQLlite Database, which is
               retrieved, anytime the user reloads the home screen in the app.
             </p>
             <p class="desc" style="color:deepskyblue;">Technologies used: Swift, Xcode, CoreData</p>
             <p class="desc" style="color:red;">Live Project Here: <a href="https://apple.com/"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            <p class="desc" style="color:white; font-weight:bold;" onclick="openModal();currentSlide(24)">Check Out Gallery Here</p>
             </p>
           </div>
         </div>
         <div id="blosminfo">
           <div class="projectinfoleft">
-            <div style="color:white; font-weight:bold; font-size:4em;">B L O S M</div>
+            <div class="projectinfotitle">B L O S M</div>
             <p class="desc" style="color:#f7BA39;">*Still in development*</p>
             <p class="desc" style="color:#555;">This is a website for a music sharing service aimed
               towards musicians seeking to collaborate.  Users can sign up and easily upload their own music.
@@ -171,6 +175,7 @@
             </p>
             <p class="desc" style="color:#ff564c;">Technologies used: Python, Django, SQLlite, Javascript, JQuery, HTML5/CSS3, Web Audio API.</p>
             <p class="desc" style="color:darksalmon;">Live Project Here: <a href="https://xinxin.com/"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            <p class="desc" style="color:white; font-weight:bold;" onclick="openModal();currentSlide(8)">Check Out Gallery Here</p>
             </p>
           </div>
         </div>
@@ -216,7 +221,7 @@
       </div>
     </div>
     <div id="techdiv">
-      <span class="banner" style="color:black; font-size:8em; font-weight:bolder; position:relative; opacity:0; left:-750px;">Technologies</span><br>
+      <span class="banner" id="techbanner">Technologies</span><br>
       <div class="assetrow">
         <div class="assetmenumain">
           <img class="asset" src="{% static "portfolio_app/images/python.png"%}"alt="Python Icon">
@@ -303,7 +308,7 @@
     </div>
     <div id="contactdiv">
       <div style="padding-top:1em; padding-bottom:1em;">
-        <a href="/resume" style="text-decoration:none; color:white;font-size:2em; border: 2px solid white; padding-left:2px; padding-right:2px;">Resume</a>
+        <a class="resumelink" href="/resume">Resume</a>
       </div>
       <div id="contactrow" style="height:auto; width:auto; margin:auto; margin-bottom:.5em;">
         <a href="mailto:lunamaecampos@gmail.com">
@@ -316,134 +321,134 @@
           <img class="contactasset" src="{% static "portfolio_app/images/github.png"%}" data-color="lavender" alt="Github Icon">
         </a>
       </div>
-      <div><span style="font-size:1.5em;color:white;">© 2017 by Luna Campos</span><div>
+      <div><span class="copyright">© 2017 by Luna Campos</span><div>
     </div>
 
     <div id="myModal" class="modal">
       <span class="close cursor" onclick="closeModal('lseModal')">&times;</span>
       <div class="modal-content">
         <div class="mySlides">
-          <div class="numbertext">L S E MEANSYNTH</div>
+          <div class="numbertext">L S E MEANSYNTH 1 / 7</div>
           <img src="{% static "portfolio_app/images/screens/lsesynth/1.png"%}">
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">L S E MEANSYNTH</div>
+          <div class="numbertext">L S E MEANSYNTH 2 / 7</div>
           <img src="{% static "portfolio_app/images/screens/lsesynth/2.png"%}">
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">L S E MEANSYNTH</div>
+          <div class="numbertext">L S E MEANSYNTH 3 / 7</div>
           <img src="{% static "portfolio_app/images/screens/lsesynth/3.png"%}">
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">L S E MEANSYNTH</div>
+          <div class="numbertext">L S E MEANSYNTH 4 / 7</div>
           <img src="{% static "portfolio_app/images/screens/lsesynth/4.png"%}">
         </div>
 
         <div class="mySlides">
-          <div class="numbertext">L S E MEANSYNTH</div>
+          <div class="numbertext">L S E MEANSYNTH 5 / 7</div>
           <img src="{% static "portfolio_app/images/screens/lsesynth/5.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">L S E MEANSYNTH</div>
+          <div class="numbertext">L S E MEANSYNTH 6 / 7</div>
           <img src="{% static "portfolio_app/images/screens/lsesynth/6.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">L S E MEANSYNTH</div>
+          <div class="numbertext">L S E MEANSYNTH 7 / 7</div>
           <img src="{% static "portfolio_app/images/screens/lsesynth/7.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">b l o s m</div>
+          <div class="numbertext">b l o s m 1 / 4</div>
           <img src="{% static "portfolio_app/images/screens/blosm/1.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">b l o s m</div>
+          <div class="numbertext">b l o s m 2 / 4</div>
           <img src="{% static "portfolio_app/images/screens/blosm/2.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">b l o s m</div>
+          <div class="numbertext">b l o s m 3 / 4</div>
           <img src="{% static "portfolio_app/images/screens/blosm/3.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">b l o s m</div>
+          <div class="numbertext">b l o s m 4 / 4</div>
           <img src="{% static "portfolio_app/images/screens/blosm/4.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">X I N X I N</div>
+          <div class="numbertext">X I N X I N 1 / 10</div>
           <img src="{% static "portfolio_app/images/screens/xinxin/1.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">X I N X I N</div>
+          <div class="numbertext">X I N X I N 2 / 10</div>
           <img src="{% static "portfolio_app/images/screens/xinxin/2.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">X I N X I N</div>
+          <div class="numbertext">X I N X I N 3 / 10</div>
           <img src="{% static "portfolio_app/images/screens/xinxin/3.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">X I N X I N</div>
+          <div class="numbertext">X I N X I N 4 / 10</div>
           <img src="{% static "portfolio_app/images/screens/xinxin/4.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">X I N X I N</div>
+          <div class="numbertext">X I N X I N 5 / 10</div>
           <img src="{% static "portfolio_app/images/screens/xinxin/5.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">X I N X I N</div>
+          <div class="numbertext">X I N X I N 6 / 10</div>
           <img src="{% static "portfolio_app/images/screens/xinxin/6.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">X I N X I N</div>
+          <div class="numbertext">X I N X I N 7 / 10</div>
           <img src="{% static "portfolio_app/images/screens/xinxin/7.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">X I N X I N</div>
+          <div class="numbertext">X I N X I N 8 / 10</div>
           <img src="{% static "portfolio_app/images/screens/xinxin/8.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">X I N X I N</div>
-          <img src="{% static "portfolio_appTASK LIST/screens/xinxin/9.png"%}">
+          <div class="numbertext">X I N X I N 9 / 10</div>
+          <img src="{% static "portfolio_app/images/screens/xinxin/9.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">X I N X I N</div>
+          <div class="numbertext">X I N X I N 10 / 10</div>
           <img src="{% static "portfolio_app/images/screens/xinxin/10.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">SYNTH GIRO</div>
+          <div class="numbertext">SYNTH GIRO 1 / 2</div>
           <img src="{% static "portfolio_app/images/screens/synthgiro/main.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">SYNTH GIRO</div>
+          <div class="numbertext">SYNTH GIRO 2 / 2</div>
           <img src="{% static "portfolio_app/images/screens/synthgiro/settings.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">TASK LIST</div>
+          <div class="numbertext">TASK LIST 1 / 7</div>
           <img src="{% static "portfolio_app/images/screens/tasklist/1.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">TASK LIST</div>
+          <div class="numbertext">TASK LIST 2 / 7</div>
           <img src="{% static "portfolio_app/images/screens/tasklist/2.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">TASK LIST</div>
+          <div class="numbertext">TASK LIST 3 / 7</div>
           <img src="{% static "portfolio_app/images/screens/tasklist/3.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">TASK LIST</div>
+          <div class="numbertext">TASK LIST 4 / 7</div>
           <img src="{% static "portfolio_app/images/screens/tasklist/4.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">TASK LIST</div>
+          <div class="numbertext">TASK LIST 5 / 7</div>
           <img src="{% static "portfolio_app/images/screens/tasklist/5.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">TASK LIST</div>
+          <div class="numbertext">TASK LIST 6 / 7</div>
           <img src="{% static "portfolio_app/images/screens/tasklist/6.png"%}">
         </div>
         <div class="mySlides">
-          <div class="numbertext">TASK LIST</div>
+          <div class="numbertext">TASK LIST 7 / 7</div>
           <img src="{% static "portfolio_app/images/screens/tasklist/7.png"%}">
         </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
