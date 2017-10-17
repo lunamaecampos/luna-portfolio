@@ -26,7 +26,7 @@
         <div class="item slides">
             <img src="{% static "portfolio_app/images/spacelander.jpg"%}" data-color="beige" alt="Space Lander">
               <div class="headerfader">
-                <div id="banner1"><span class="banner" style="color:darkseagreen">Luna</span><span class="banner" style="color:paleturquoise">Campos</span></div>
+                <div id="banner1"><span class="banner" style="color:darkseagreen; padding-right:.25em;">Luna</span><span class="banner" style="color:paleturquoise">Campos</span></div>
                 <div id="banner2"><span class="banner">Full Stack Web Developer</span></div>
               </div>
             <div class="carousel-caption">
@@ -64,7 +64,9 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-
+    <div id="navdiv">
+      <div class="arrow" onclick="navScroller('aboutme')"></div>
+    </div>
     <div id="aboutme">
       <div class="leftpane">
         <span id="aboutmeheader" class="banner">About Me</span><br>
@@ -73,7 +75,7 @@
         </div>
       </div>
       <div id="bio">
-        I am artist with a vision to build out projects from the ground up.
+        I am an artist with a vision to build out projects from the ground up.
         I am a self-sufficient and resourceful person so I'm not afraid to work on my own.
         However, I also am open to and value input from my peers and enjoy collaborating ideas with others.
         My recent endeavors include building out web and iOS applications and stretch to composing/producing musical ideas
@@ -114,7 +116,7 @@
               The application is built using the MEAN stack and implements the Web Audio API for sound synthesis.
               Users can sign up and save their favorite patches as JSON data and call back from the database at a later time.</p>
             <p class="desc" style="color:#882d16;">Technologies used: Javascript, MongoDB, ExpressJS, AngularJS, NodeJS, JQuery, Web Audio API, HTML5/CSS3.</p>
-            <p class="desc" style="color:#042f85">Live Project Here: <a href="https://github.com/lunamaecampos"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            <p class="desc" style="color:#042f85">Live Project Here: <a href="https://github.com/lunamaecampos"style="text-decoration:none; color:white;">Coming Soon!</a></p>
             <p class="desc" style="color:white; font-weight:bold;" onclick="openModal();currentSlide(1)">Check Out Gallery Here</p>
             </p>
           </div>
@@ -131,7 +133,7 @@
               displayed on the main band website.
             </p>
             <p class="desc" style="color:skyblue;">Technologies used: Python, Django, SQLlite, Javascript, JQuery, HTML5/CSS3, RWD.</p>
-            <p class="desc" style="color:moccasin;">Live Project Here: <a href="https://xinxin.com/"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            <p class="desc" style="color:moccasin;">Live Project Here: <a href="https://xinxin.com/"style="text-decoration:none; color:white;">Coming Soon!</a></p>
             <p class="desc" style="color:white; font-weight:bold;" onclick="openModal();currentSlide(12)">Check Out Gallery Here</p>
             </p>
           </div>
@@ -146,7 +148,7 @@
               CoreMotion Technology which makes for fun expressive play.
             </p>
             <p class="desc" style="color:dimgrey;">Technologies used: Swift, Xcode, AudioKit, CoreMotion, Midi.</p>
-            <p class="desc" style="color:limegreen;">Live Project Here: <a href="https://apple.com/"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            <p class="desc" style="color:limegreen;">Live Project Here: <a href="https://apple.com/"style="text-decoration:none; color:white;">Coming Soon!</a></p>
             <p class="desc" style="color:white; font-weight:bold;" onclick="openModal();currentSlide(22)">Check Out Gallery Here</p>
             </p>
           </div>
@@ -159,7 +161,7 @@
               retrieved, anytime the user reloads the home screen in the app.
             </p>
             <p class="desc" style="color:deepskyblue;">Technologies used: Swift, Xcode, CoreData</p>
-            <p class="desc" style="color:red;">Live Project Here: <a href="https://apple.com/"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
+            <p class="desc" style="color:red;">Live Project Here: <a href="https://apple.com/"style="text-decoration:none; color:white;">Coming Soon!</a></p>
             <p class="desc" style="color:white; font-weight:bold;" onclick="openModal();currentSlide(24)">Check Out Gallery Here</p>
             </p>
           </div>
@@ -170,12 +172,12 @@
             <p class="desc" style="color:#f7BA39;">*Still in development*</p>
             <p class="desc" style="color:#555;">This is a website for a music sharing service aimed
               towards musicians seeking to collaborate.  Users can sign up and easily upload their own music.
-              Media files uploaded are refernced to a separate media folder from the SQLlite database.  The
+              Media files uploaded are referenced to a separate media folder from the SQLlite database.  The
               media player is HTML/CSS/JS and utilizes the Web Audio API for playback options.
             </p>
             <p class="desc" style="color:#ff564c;">Technologies used: Python, Django, SQLlite, Javascript, JQuery, HTML5/CSS3, Web Audio API.</p>
-            <p class="desc" style="color:darksalmon;">Live Project Here: <a href="https://xinxin.com/"style="text-decoration:none; color:white;">Hi Hi Henlo</a></p>
-            <p class="desc" style="color:white; font-weight:bold;" onclick="openModal();currentSlide(8)">Check Out Gallery Here</p>
+            <p class="desc" style="color:darksalmon;">Live Project Here: <a href="https://xinxin.com/"style="text-decoration:none; color:white;">Coming Soon!</a></p>
+            <p class="desc" style="color:white; font-weight:bold;" onclick="openModal();currentSlide(8)" class="pointer">Check Out Gallery Here</p>
             </p>
           </div>
         </div>
@@ -297,18 +299,18 @@
           <h3>NI Komplete</h3>
         </div>
         <div class="assetmenu">
-          <img class="asset" src="{% static "portfolio_app/images/uaudio.png"%}"alt="Universal Audio Icon">
+          <div class="assetfix"><img class="asset" src="{% static "portfolio_app/images/uaudio.png"%}"alt="Universal Audio Icon"></div>
           <h3>Universal Audio</h3>
         </div>
         <div class="assetmenu">
-          <img class="asset" src="{% static "portfolio_app/images/arturia.png"%}"alt="Arturia Icon">
+          <div class="assetfix"><img class="asset" src="{% static "portfolio_app/images/arturia.png"%}"alt="Arturia Icon"></div>
           <h3>Arturia V</h3>
         </div>
       </div>
     </div>
     <div id="contactdiv">
       <div style="padding-top:1em; padding-bottom:1em;">
-        <a class="resumelink" href="/resume">Resume</a>
+        <a class="resumelink" href="{% static "portfolio_app/pdf/campos-luna-resume.pdf"%}">Resume</a>
       </div>
       <div id="contactrow" style="height:auto; width:auto; margin:auto; margin-bottom:.5em;">
         <a href="mailto:lunamaecampos@gmail.com">
@@ -325,7 +327,7 @@
     </div>
 
     <div id="myModal" class="modal">
-      <span class="close cursor" onclick="closeModal('lseModal')">&times;</span>
+      <span class="close cursor" style="font-size:4em; color:white;" onclick="closeModal('lseModal')">&times;</span>
       <div class="modal-content">
         <div class="mySlides">
           <div class="numbertext">L S E MEANSYNTH 1 / 7</div>

@@ -1,5 +1,5 @@
 // *********Fade out for pages***********************
-// 
+//
 // $(function(){
 //   var documentEl = $(document),
 //       fadeElem = $(".slide");
@@ -13,19 +13,19 @@
 //     });
 //   });
 // });
-// $(function(){
-//   var documentEl = $(document),
-//       fadeElem = $("#aboutme");
-//   documentEl.on('scroll', function(){
-//     var currScrollPos = documentEl.scrollTop();
-//
-//     fadeElem.each(function(){
-//       var $this = $(this),
-//         elemOffsetTop = $this.offset().top;
-//       if(currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/300);
-//     });
-//   });
-// });
+$(function(){
+  var documentEl = $(document),
+      fadeElem = $("#aboutme");
+  documentEl.on('scroll', function(){
+    var currScrollPos = documentEl.scrollTop();
+
+    fadeElem.each(function(){
+      var $this = $(this),
+        elemOffsetTop = $this.offset().top;
+      if(currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos-elemOffsetTop)/300);
+    });
+  });
+});
 // $(function(){
 //   var documentEl = $(document),
 //       fadeElem = $("#projectsdiv");
@@ -254,6 +254,13 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
+
+// *********************************************************************
+// ********************Nav Bar Scrolling******************************
+function navScroller(divname) {
+    var elmnt = document.getElementById(divname);
+    elmnt.scrollIntoView();
+}
 
 // *********************************************************************
 // ********************Parallax Scrolling******************************
